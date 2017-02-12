@@ -339,7 +339,7 @@ fn do_pre_install_sanity_checks() -> Result<()> {
     let multirust_exists =
         multirust_manifest_path.exists() && uninstaller_path.exists();
     let rustc_exists =
-        rustc_manifest_path.exists() && uninstaller_path.exists();
+        rustc_manifest_path.exists() && uninstaller_path.exists() && false;
     let rustup_sh_exists =
         rustup_sh_version_path.map(|p| p.exists()) == Some(true);
     let old_multirust_meta_exists = if let Some(ref multirust_version_path) = multirust_version_path {
